@@ -1,0 +1,27 @@
+body {          /*Use to remove padding wrapping react root element*/
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.navigation {
+  width: 100%;
+  height: 80px;
+  margin: 0;
+  padding:0px;
+  background-color: #F1DEC9;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+
+nav h2 {
+  padding-left: 1em;
+}
+
+
+nav li {
+  display: inline-block;
+  padding: .5em;
+}
