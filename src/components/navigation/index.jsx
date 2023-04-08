@@ -4,15 +4,18 @@ import React from 'react';
 export default function NavigationBar() {
 
   return(
-    <nav>
+    <nav class="navigation">
+      <h2>PayCheque</h2>
       <ul>
-        <li>Home</li>
-        <li>Paycheck</li>
-        <li>Paystubs</li>
-      </ul>
-      <ul>
-        <li>Username</li>
-        <li>Logout</li>
+          <li>
+            user DP
+          </li>
+          <li>
+            username
+          </li>
+          <li>
+            hamburger menu
+          </li>
       </ul>
     </nav>
   )
