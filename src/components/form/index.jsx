@@ -20,7 +20,6 @@ export default function Form() {
           name="Salary"
           placeholder="Salary"
         />
-       <label for="province-select">Province:</label>
 
         <select name="province" id="province-select">
           <option value="">--Please select your province--</option>
