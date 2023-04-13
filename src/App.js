@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import NavigationBar from './components/navigation/index.jsx';
 import Form from './components/form';
 
