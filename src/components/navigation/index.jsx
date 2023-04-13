@@ -4,7 +4,7 @@ import React from 'react';
 export default function NavigationBar() {
 
   return(
-    <nav class="navigation">
+    <nav className="navigation">
       <h2>PayCheque</h2>
       <ul>
           <li>

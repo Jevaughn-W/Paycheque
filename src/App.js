@@ -7,9 +7,9 @@ const message = "Our post tax salary calculator can help you better estimate you
 
 function App() {
   return (
-    <div class="application">
+    <div className="application">
       <NavigationBar/>
-      <div class="body">
+      <div className="body">
         <span>
           {message}
         </span>
