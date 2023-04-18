@@ -1,3 +1,6 @@
+const e = require("express");
+const { on } = require("pg/lib/query");
+
 let userData =  {
   Salary : 60000,
   Province: "Ontario"
@@ -8,14 +11,25 @@ let userData =  {
 let ontarioSalaryTiers = [46226, 92454, 150000, 220000]
 let ontarioTaxTiers = [0.0505, 0.0915, 0.1116, 0.1216, 0.1316]
 
-let bracketCheck = (userSalary, salaryBracket) => { // Use recursion to create an object with the salary and the rate from the above array
-  if (userSalary >= salaryBracket) {
-    return salaryBracket;
+
+// Return a subset of the tax brackets as of the first value of the salary passed in
+
+const returnTaxBracketArray = ((arr, userSalary) => {
+  
+  let taxCap = arr.find(salary => salary > userSalary); // Returns undefined if user salary is greater than all elements
+  if (taxCap) {
+    return arr.filter(salary => salary <= taxCap);
+  } else {
+    return arr;
   }
-};
+});
 
-console.log( bracketCheck(60000, 46226));
+// Return a subject of the tax rates based on the length of the tax bracket
+const returnTaxRatesArray = ((arr, resultLength, salary) => { 
+  let result = arr.slice(0, resultLength);
+  return result;
+})
 
-const result = ontarioSalaryTiers.map(salaryBracket => bracketCheck(60000, salaryBracket));
 
-console.log(result)
+console.log( returnTaxBracketArray(ontarioSalaryTiers, 250000));
+console.log( returnTaxRatesArray(ontarioTaxTiers, 4));
