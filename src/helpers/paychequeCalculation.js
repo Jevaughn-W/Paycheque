@@ -1,7 +1,3 @@
-const e = require("express");
-const { user } = require("pg/lib/defaults");
-const { on } = require("pg/lib/query");
-
 let userData =  {
   Salary : 60000,
   Province: "Ontario"
@@ -9,8 +5,8 @@ let userData =  {
 
 // Ontario Tax Bracket
 
-let ontarioSalaryTiers = [46226, 92454, 150000, 220000]
-let ontarioTaxTiers = [0.0505, 0.0915, 0.1116, 0.1216, 0.1316]
+let ontarioSalaryTiers = [46226, 92454, 150000, 220000];
+let ontarioTaxTiers = [0.0505, 0.0915, 0.1116, 0.1216, 0.1316];
 
 
 // Return a subset of the tax brackets as of the first value of the salary passed in
