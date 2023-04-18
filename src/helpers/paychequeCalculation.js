@@ -8,6 +8,10 @@ let userData =  {
 let ontarioSalaryTiers = [46226, 92454, 150000, 220000];
 let ontarioTaxTiers = [0.0505, 0.0915, 0.1116, 0.1216, 0.1316];
 
+// Federal Tax Bracket
+
+let federalSalaryTiers = [53359, 106717, 165430, 235675];
+let federalTaxTiers = [0.15, 0.205, 0.26, 0.29, 0.33];
 
 // Return a subset of the tax brackets as of the first value of the salary passed in
 
@@ -49,17 +53,15 @@ const calculateStateTax = (salaryArr, taxArr, userSalary) => {
     }
   });
 
-  let provincialTax = taxableIncome.reduce(
+  let tax = taxableIncome.reduce(
     (accumulator, currentValue, index) => accumulator + (currentValue * taxTiers[index]),
     0
   );
 
   // Check if there is an additional rate to apply
   if((salaryArr.length !== taxArr.length) && userSalary > salaryArr[salaryArr.length - 1]) {
-    provincialTax += (userSalary - salaryArr[salaryArr.length - 1]) * taxArr[taxArr.length - 1];
+    tax += (userSalary - salaryArr[salaryArr.length - 1]) * taxArr[taxArr.length - 1];
   }
   
-  return provincialTax;
+  return tax;
 };
-
-// console.log (calculateStateTax(ontarioSalaryTiers, ontarioTaxTiers, 250000));
