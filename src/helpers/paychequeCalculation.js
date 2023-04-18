@@ -1,4 +1,5 @@
 const e = require("express");
+const { user } = require("pg/lib/defaults");
 const { on } = require("pg/lib/query");
 
 let userData =  {
@@ -30,6 +31,39 @@ const returnTaxRatesArray = ((arr, resultLength, salary) => {
   return result;
 })
 
+const calculateStateTax = (salaryArr, taxArr, userSalary) => {
 
-console.log( returnTaxBracketArray(ontarioSalaryTiers, 250000));
-console.log( returnTaxRatesArray(ontarioTaxTiers, 4));
+  // create a subset of the applicable table rates and salary brackets
+  let salaryBracket = returnTaxBracketArray(salaryArr, userSalary);
+  let taxTiers = returnTaxRatesArray(taxArr, salaryBracket.length);
+
+  let iteratingSalary = userSalary;
+
+  let taxableIncome  = salaryBracket.map((salary, index) => {
+    
+    // Check subtract the previous rate to get the tax range; if it's on the first range, return the first value
+    let previousSalary = salaryBracket[index - 1] ? salary - salaryBracket[index - 1] : salary;
+
+    // If the value/remainder is outside of the range, return the range and find the remainder. If the critera isn't met, return the remiander
+    if(previousSalary < iteratingSalary) {
+      iteratingSalary -= previousSalary;
+      return previousSalary;
+    } else {
+      return iteratingSalary;
+    }
+  });
+
+  let provincialTax = taxableIncome.reduce(
+    (accumulator, currentValue, index) => accumulator + (currentValue * taxTiers[index]),
+    0
+  );
+
+  // Check if there is an additional rate to apply
+  if((salaryArr.length !== taxArr.length) && userSalary > salaryArr[salaryArr.length - 1]) {
+    provincialTax += (userSalary - salaryArr[salaryArr.length - 1]) * taxArr[taxArr.length - 1];
+  }
+  
+  return provincialTax;
+};
+
+// console.log (calculateStateTax(ontarioSalaryTiers, ontarioTaxTiers, 250000));
