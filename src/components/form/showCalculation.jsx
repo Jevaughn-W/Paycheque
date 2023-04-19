@@ -7,8 +7,8 @@ export default function ShowCalculation(props) {
   return(
     <section className="result">
       <div className="result-header">
-        <span>Your Tax Summary</span>
         <span onClick={props.cancel}>x goes here</span>
+        <h2>Tax Summary</h2>
       </div>
       <div className="result-body">
         <p>Provincial Taxes: {props.state.provincialTax}</p>
