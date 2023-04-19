@@ -11,9 +11,10 @@ export default function ShowCalculation(props) {
         <span onClick={props.cancel}>x goes here</span>
       </div>
       <div className="result-body">
-        <p>Provincial Taxes: {props.provincialTaxes}</p>
-        <p>Federal Taxes: {props.federalTaxes}</p>
-        <p>Net Salary: {props.netSalary}</p>
+        <p>Provincial Taxes: {props.state.provincialTax}</p>
+        <p>Federal Taxes: {props.state.federalTax}</p>
+        <p>Annual Net Salary: {props.state.Salary - props.state.provincialTax - props.state.federalTax}</p>
+        <p>Monthly Salary: {(props.state.Salary - props.state.provincialTax - props.state.federalTax)/12}</p>
       </div>
     </section>
   )
