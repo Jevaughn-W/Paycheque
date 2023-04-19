@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { calculateTax } from "../../helpers/paychequeCalculation";
-
+import ShowCalculation from  "./showCalculation";
 
 // Ontario Tax Bracket
 
@@ -27,7 +27,7 @@ export default function Form() {
   
   // Function to create a controlled component with multiple components
   const handleUserInput = (event)=> {
-    setSalaryForm({...salaryForm, [event.target.name] : event.target.value})
+    setSalaryForm(prev => ({...prev, [event.target.name] : event.target.value}));
   };
 
   // Function to do an action once the salary and province has been provided - to be updated to provide a calculation
@@ -38,9 +38,10 @@ export default function Form() {
     let provincialTax = calculateTax(ontarioSalaryTiers, ontarioTaxTiers, salaryForm.Salary);
     let federalTax = calculateTax( federalSalaryTiers, federalTaxTiers, salaryForm.Salary);
 
-    console.log("salaryForm", salaryForm);
-    console.log("Provincial Tax", provincialTax);
-    console.log("Federal Tax", federalTax);
+    setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
+    // console.log("salaryForm", salaryForm);
+    // console.log("Provincial Tax", provincialTax);
+    // console.log("Federal Tax", federalTax);
   };
 
   return (
@@ -63,6 +64,7 @@ export default function Form() {
         </select>
         <button onClick={event => handleCalculation(event)}>Calculate</button>
       </form>
+      <ShowCalculation state={salaryForm}/>
     </section>
   )
 
