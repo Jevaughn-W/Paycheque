@@ -70,4 +70,20 @@ input, select, button {
   justify-content: center;
 }
 
+.result {
+  background-color: #F1DEC9;
+  padding: 1em;
+  border-radius: 5px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-family: Helvetica;
+}
+
+section p {
+  background-color: white;
+  height: 2em;
+  border-radius: 5px;
+  padding-top: 1em;
+}
+
 /*# sourceMappingURL=index.css.map */
