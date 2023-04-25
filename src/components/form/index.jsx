@@ -24,6 +24,7 @@ const provinceList = provinces.map((province, index) => {
 export default function Form() {
   
   const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null});
+  const [mode, setMode] = useState("INPUT");
   
   // Function to create a controlled component with multiple components
   const handleUserInput = (event)=> {
@@ -39,14 +40,17 @@ export default function Form() {
     let federalTax = calculateTax( federalSalaryTiers, federalTaxTiers, salaryForm.Salary);
 
     setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
-    // console.log("salaryForm", salaryForm);
-    // console.log("Provincial Tax", provincialTax);
-    // console.log("Federal Tax", federalTax);
+    setMode("SHOW");
+  };
+
+  // Function to handle closing results component
+  const onClose = ()=> {
+    setMode("INPUT");
   };
 
   return (
     <section className="userInput">
-      <form>
+      {mode === "INPUT" && <form>
         <input
           type="text"
           name="Salary"
@@ -63,8 +67,8 @@ export default function Form() {
           {provinceList}
         </select>
         <button onClick={event => handleCalculation(event)}>Calculate</button>
-      </form>
-      <ShowCalculation state={salaryForm}/>
+      </form>}
+      {mode === "SHOW" && <ShowCalculation state={salaryForm} cancel={onClose}/>}
     </section>
   )
 
