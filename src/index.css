@@ -83,7 +83,21 @@ section p {
   background-color: white;
   height: 2em;
   border-radius: 5px;
-  padding-top: 1em;
+  padding: 0.8em;
+}
+
+.result-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.result-header h2 {
+  margin: 0em;
+}
+.result-header .close-button {
+  width: 0.8em;
+  height: 0.8em;
+  filter: grayscale(70%);
 }
 
 /*# sourceMappingURL=index.css.map */

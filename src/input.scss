@@ -92,6 +92,22 @@ section {
     background-color: $secondary-color ;
     height: 2em;
     border-radius: 5px;
-    padding: 1em;
+    padding: .8em;
+  }
+}
+
+.result-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+  h2 {
+    margin: 0em;
+  }
+
+  .close-button {
+    width: 0.8em;
+    height: 0.8em;
+    filter: grayscale(70%);
   }
 }
