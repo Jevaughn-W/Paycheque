@@ -42,6 +42,9 @@ body {
   flex-direction: column;
   margin-top: 2em;
 }
+.body h1 {
+  text-align: center;
+}
 
 nav h2 {
   padding-left: 1em;
