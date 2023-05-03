@@ -11,6 +11,7 @@ function App() {
     <div className="application">
       <NavigationBar/>
       <div className="body">
+        <h1>Paycheque Calculator</h1>
         <span>
           {message}
         </span>
