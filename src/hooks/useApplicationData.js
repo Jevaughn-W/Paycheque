@@ -17,6 +17,14 @@ export default function useApplicationData() {
       'federal' : {
         'salary' : [53359, 106717, 165430, 235675],
         'rates' : [0.15, 0.205, 0.26, 0.29, 0.33]
+      },
+      'EI' : {
+        'rate' : 1.63,
+        'maxSalary' : 61500
+      },
+      'CPP' : {
+        'rate': 0.0595,
+        'maxContribution' : 3754
       }
     }
   );
