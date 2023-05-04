@@ -18,7 +18,7 @@ function App() {
   
   return (
     <div className="application">
-      <ApplicationDataContext.Provider value={state}> {/*set the context value to the state from the API*/}
+      <ApplicationDataContext.Provider value={{state, setState}}> {/*set the context value to the state from the API*/}
         <NavigationBar/>
         <div className="body">
           <h1>Paycheque Calculator</h1>
