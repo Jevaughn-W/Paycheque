@@ -32,6 +32,8 @@ export default function Form() {
 
     let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, salaryForm.Salary);
     let federalTax = calculateTax( state.federal.salary, state.federal.rates, salaryForm.Salary);
+    let CPP = null;
+    let EI = null;
 
     setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
     setMode("SHOW");
