@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { calculateTax } from "../../helpers/paychequeCalculation";
 import ShowCalculation from  "./showCalculation";
+import { ApplicationDataContext } from "../../App"
 
 // Ontario Tax Bracket
 
@@ -22,6 +23,9 @@ const provinceList = provinces.map((province, index) => {
 
 
 export default function Form() {
+  
+  const {state, setState} = useContext(ApplicationDataContext);
+
   
   const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null});
   const [mode, setMode] = useState("INPUT");
