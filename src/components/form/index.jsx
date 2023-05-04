@@ -3,16 +3,6 @@ import { calculateTax } from "../../helpers/paychequeCalculation";
 import ShowCalculation from  "./showCalculation";
 import { ApplicationDataContext } from "../../App"
 
-// Ontario Tax Bracket
-
-let ontarioSalaryTiers = [46226, 92454, 150000, 220000];
-let ontarioTaxTiers = [0.0505, 0.0915, 0.1116, 0.1216, 0.1316];
-
-// Federal Tax Bracket
-
-let federalSalaryTiers = [53359, 106717, 165430, 235675];
-let federalTaxTiers = [0.15, 0.205, 0.26, 0.29, 0.33];
-
 const provinces = ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland', 'Northwest Territories', 'Nova Scotia', 'Nunavut', "Ontario", 'Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon'];  // To update list once database is expanded
 
 const provinceList = provinces.map((province, index) => {
@@ -40,8 +30,8 @@ export default function Form() {
     event.preventDefault();
 
 
-    let provincialTax = calculateTax(ontarioSalaryTiers, ontarioTaxTiers, salaryForm.Salary);
-    let federalTax = calculateTax( federalSalaryTiers, federalTaxTiers, salaryForm.Salary);
+    let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, salaryForm.Salary);
+    let federalTax = calculateTax( state.federal.salary, state.federal.rates, salaryForm.Salary);
 
     setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
     setMode("SHOW");
