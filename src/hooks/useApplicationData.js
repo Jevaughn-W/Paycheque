@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 export default function useApplicationData() {
   const [state, setState] = useState(
     {
-      'provincial' : {
+      'ontario' : {
         'salary' : [46226, 92454, 150000, 220000],
         'rates' : [0.0505, 0.0915, 0.1116, 0.1216, 0.1316]
       },
