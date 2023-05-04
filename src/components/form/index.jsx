@@ -13,7 +13,7 @@ let ontarioTaxTiers = [0.0505, 0.0915, 0.1116, 0.1216, 0.1316];
 let federalSalaryTiers = [53359, 106717, 165430, 235675];
 let federalTaxTiers = [0.15, 0.205, 0.26, 0.29, 0.33];
 
-const provinces = ["Ontario"];  // To update list once database is expanded
+const provinces = ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland', 'Northwest Territories', 'Nova Scotia', 'Nunavut', "Ontario", 'Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon'];  // To update list once database is expanded
 
 const provinceList = provinces.map((province, index) => {
   return(
