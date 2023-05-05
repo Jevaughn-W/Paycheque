@@ -3,11 +3,22 @@ import { calculateTax } from "../../helpers/paychequeCalculation";
 import ShowCalculation from  "./showCalculation";
 import { ApplicationDataContext } from "../../App"
 
+
+// Options for the province drop down list
 const provinces = ['Alberta', 'British Columbia', 'Manitoba', 'New Brunswick', 'Newfoundland', 'Northwest Territories', 'Nova Scotia', 'Nunavut', "Ontario", 'Prince Edward Island', 'Quebec', 'Saskatchewan', 'Yukon'];  // To update list once database is expanded
 
 const provinceList = provinces.map((province, index) => {
   return(
     <option value={province} key={index}>{province}</option>
+  );
+});
+
+// Options for the pay period drop down list
+const payPeriods = ['Annually', 'Monthly', 'Semi-Monthly', 'Bi-Weekly'];
+
+const payPeriodList = payPeriods.map((payPeriod, index) => {
+  return(
+    <option value={payPeriod} key={index}>{payPeriod}</option>
   );
 });
 
@@ -17,7 +28,7 @@ export default function Form() {
   const {state, setState} = useContext(ApplicationDataContext);
 
   
-  const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null});
+  const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null, 'PayPeriod': null});
   const [mode, setMode] = useState("INPUT");
   
   // Function to create a controlled component with multiple components
@@ -55,11 +66,19 @@ export default function Form() {
         />
 
         <select 
+          name="PayPeriod"
+          id="payPeriod-select"
+          onChange={event => handleUserInput(event)}
+        >
+          <option value="">Pay Period</option>
+          {payPeriodList}
+        </select>
+        <select 
           name="Province"
           id="province-select"
           onChange={event => handleUserInput(event)}
         >
-          <option value="">--Please select your province--</option>
+          <option value="">Province</option>
           {provinceList}
         </select>
         <button onClick={event => handleCalculation(event)}>Calculate</button>
