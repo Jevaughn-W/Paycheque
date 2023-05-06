@@ -83,7 +83,7 @@ export default function Form() {
         </select>
         <button onClick={event => handleCalculation(event)}>Calculate</button>
       </form>}
-      {mode === "SHOW" && <ShowCalculation state={salaryForm} cancel={onClose}/>}
+      {mode === "SHOW" && <ShowCalculation state={salaryForm} cancel={onClose} CPP={state.CPP} EI={state.EI}/>}
     </section>
   )
 
