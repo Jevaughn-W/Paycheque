@@ -39,6 +39,7 @@ export default function ShowCalculation(props) {
         />
       </div>
       <div className="result-body">
+        <p><strong>Salary:</strong> ${props.state.Salary}</p>
         <p><strong>Provincial Taxes:</strong> ${Math.round(props.state.provincialTax * 100) / 100}</p>
         <p><strong>Federal Taxes:</strong> ${Math.round(props.state.federalTax * 100) /100}</p>
         <p><strong>Annual Net Salary:</strong> ${annualNetSalary}</p>
