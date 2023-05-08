@@ -14,7 +14,7 @@ export default function NavigationBar() {
             username
           </li>
           <li>
-            hamburger menu
+            <img alt="Hamburger-menu" src='images/hamburger-menu.png' width="20px" height="20px"/>
           </li>
       </ul>
     </nav>
