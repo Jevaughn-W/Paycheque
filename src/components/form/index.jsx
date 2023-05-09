@@ -30,11 +30,16 @@ export default function Form() {
   
   const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null, 'PayPeriod': null});
   const [mode, setMode] = useState("INPUT");
+  const [payType, setPayType] = useState(null);
   
   // Function to create a controlled component with multiple components
   const handleUserInput = (event)=> {
     setSalaryForm(prev => ({...prev, [event.target.name] : event.target.value}));
   };
+
+  const handleClick = (event) => {
+    setPayType(prev => event.target.value);
+  }
 
   // Function to do an action once the salary and province has been provided - to be updated to provide a calculation
   const handleCalculation = (event) => {
@@ -57,16 +62,16 @@ export default function Form() {
 
   return (
     <section className="userInput">
-      
+
         <fieldset>
           <legend>Select pay type</legend>
           <div >
-            <input type="radio" id="salaried" name="pay-type" value="salaried"/>
-            <label for="salaried">Salaried</label>
+            <input type="radio" id="salary" name="pay-type" value="salary" onClick={event => handleClick(event)}/>
+            <label htmlFor="salary">Salary</label>
           </div>
           <div>
-            <input type="radio" id="hourly" name="pay-type" value="hourly"/>
-            <label for="hourly">Hourly</label>
+            <input type="radio" id="hourly" name="pay-type" value="hourly" onClick={event => handleClick(event)}/>
+            <label htmlFor="hourly">Hourly</label>
           </div>
         </fieldset>
 
@@ -80,6 +85,13 @@ export default function Form() {
           placeholder="Salary"
           onChange={event => handleUserInput(event)}
         />
+
+        { payType === "hourly" && <input
+          type="text"
+          name="workHours"
+          placeholder="workHours"
+          onChange={event => handleUserInput(event)}
+        />}
 
         <select 
           name="PayPeriod"
