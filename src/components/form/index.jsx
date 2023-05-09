@@ -57,7 +57,23 @@ export default function Form() {
 
   return (
     <section className="userInput">
+      
+        <fieldset>
+          <legend>Select pay type</legend>
+          <div >
+            <input type="radio" id="salaried" name="pay-type" value="salaried"/>
+            <label for="salaried">Salaried</label>
+          </div>
+          <div>
+            <input type="radio" id="hourly" name="pay-type" value="hourly"/>
+            <label for="hourly">Hourly</label>
+          </div>
+        </fieldset>
+
       {mode === "INPUT" && <form>
+        
+        
+        
         <input
           type="text"
           name="Salary"
