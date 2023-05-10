@@ -2,6 +2,7 @@ $font-stack: Helvetica;
 $primary-color: #68BBE3;
 $secondary-color: #0E86D4;
 $tertiary-color: white;
+$navy-blue: #003B73;
 
 
 body {
@@ -22,18 +23,37 @@ body {
   height: 80px;
   margin: 0;
   padding:0px;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: $tertiary-color;
+
+  a{
+    color: $tertiary-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $navy-blue;
+  }
+
+  a:active {
+    color : red;
+  }
 }
 .footer {
   width: 100%;
   height: 80px;
   margin: 0;
   padding:0px;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: $tertiary-color;
   li {
     display: inline-block;
     padding: .5em;

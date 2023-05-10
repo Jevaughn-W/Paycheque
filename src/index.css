@@ -16,9 +16,22 @@ body {
   height: 80px;
   margin: 0;
   padding: 0px;
-  background-color: #68BBE3;
+  background-color: #0E86D4;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+}
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+.navigation a:hover {
+  color: #003B73;
+}
+.navigation a:active {
+  color: red;
 }
 
 .footer {
@@ -26,9 +39,12 @@ body {
   height: 80px;
   margin: 0;
   padding: 0px;
-  background-color: #68BBE3;
+  background-color: #0E86D4;
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
 }
 .footer li {
   display: inline-block;
