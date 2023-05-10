@@ -60,25 +60,6 @@ nav {
   }
 }
 
-.userInput {
-  margin: auto;
-  margin-top: 3em;
-  width: 50%
-}
-
-.userInput form {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-
-input, select, button {
-  margin-bottom: 1em;
-  height: 2em;
-  display: flex;
-  justify-content: center;
-}
-
 // results details
 
 .result {
