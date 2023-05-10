@@ -65,7 +65,7 @@ export default function Form() {
     <section className="userInput">
 
         <fieldset className="radio">
-          <legend>Select pay type</legend>
+          <legend>Select Pay Type</legend>
           <div className="radio">
             <input className="radio" type="radio" id="salary" name="pay-type" value="salary" onClick={event => handleClick(event)}/>
             <label className ="radio" htmlFor="salary">Salary</label>
