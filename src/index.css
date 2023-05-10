@@ -2,7 +2,7 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  font: Helvetica;
+  font-family: Helvetica;
 }
 
 .application {
@@ -16,7 +16,7 @@ body {
   height: 80px;
   margin: 0;
   padding: 0px;
-  background-color: #F1DEC9;
+  background-color: #68BBE3;
   display: flex;
   justify-content: space-between;
 }
@@ -26,7 +26,7 @@ body {
   height: 80px;
   margin: 0;
   padding: 0px;
-  background-color: #F1DEC9;
+  background-color: #68BBE3;
   display: flex;
   justify-content: center;
 }
@@ -55,7 +55,7 @@ nav li {
 }
 
 .result {
-  background-color: #F1DEC9;
+  background-color: #68BBE3;
   padding: 1em;
   border-radius: 5px;
   margin-top: 2em;
@@ -64,7 +64,7 @@ nav li {
 }
 
 section p {
-  background-color: white;
+  background-color: #0E86D4;
   height: 2em;
   border-radius: 5px;
   padding: 0.8em;

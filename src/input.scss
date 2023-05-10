@@ -1,13 +1,14 @@
 $font-stack: Helvetica;
-$primary-color: #F1DEC9;
-$secondary-color: white;
+$primary-color: #68BBE3;
+$secondary-color: #0E86D4;
+$tertiary-color: white;
 
 
 body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-  font: $font-stack;
+  font-family: $font-stack;
 }
 
 .application {
