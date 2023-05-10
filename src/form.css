@@ -1,0 +1,48 @@
+/* Format form section */
+
+.userInput {
+  margin: auto;
+  margin-top: 3em;
+  width: 50%;
+  position: relative;
+  border: 1px solid  black;
+  padding : 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top:5em;
+  width: 100%;
+}
+
+/* Formatting radio */
+
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width : 30%;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+input.radio {
+  margin:auto;
+}
+
+label.radio {
+  margin-left: 1em;
+}
+
+
+/*# sourceMappingURL=form.css.map */

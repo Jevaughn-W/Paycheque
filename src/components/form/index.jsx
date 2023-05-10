@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { calculateTax } from "../../helpers/paychequeCalculation";
 import ShowCalculation from  "./showCalculation";
 import { ApplicationDataContext } from "../../App"
+import '../../form.css';
 
 
 // Options for the province drop down list
@@ -63,15 +64,15 @@ export default function Form() {
   return (
     <section className="userInput">
 
-        <fieldset>
+        <fieldset className="radio">
           <legend>Select pay type</legend>
-          <div >
-            <input type="radio" id="salary" name="pay-type" value="salary" onClick={event => handleClick(event)}/>
-            <label htmlFor="salary">Salary</label>
+          <div className="radio">
+            <input className="radio" type="radio" id="salary" name="pay-type" value="salary" onClick={event => handleClick(event)}/>
+            <label className ="radio" htmlFor="salary">Salary</label>
           </div>
-          <div>
-            <input type="radio" id="hourly" name="pay-type" value="hourly" onClick={event => handleClick(event)}/>
-            <label htmlFor="hourly">Hourly</label>
+          <div className="radio">
+            <input className ='radio' type="radio" id="hourly" name="pay-type" value="hourly" onClick={event => handleClick(event)}/>
+            <label className ="radio" htmlFor="hourly">Hourly</label>
           </div>
         </fieldset>
 
