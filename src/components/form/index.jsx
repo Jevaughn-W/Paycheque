@@ -77,38 +77,47 @@ export default function Form() {
 
       {mode === "INPUT" && <form>
         
-        
-        
-        <input
-          type="text"
-          name="Salary"
-          placeholder="Salary"
-          onChange={event => handleUserInput(event)}
-        />
+        <div className="Form">
+          <label htmlFor="Salary">Salary</label>
+          <input
+            type="text"
+            name="Salary"
+            placeholder="Salary"
+            onChange={event => handleUserInput(event)}
+          />
+        </div>     
 
-        { payType === "hourly" && <input
+        { payType === "hourly" && 
+        <input
           type="text"
           name="workHours"
           placeholder="workHours"
           onChange={event => handleUserInput(event)}
         />}
 
-        <select 
-          name="PayPeriod"
-          id="payPeriod-select"
-          onChange={event => handleUserInput(event)}
-        >
-          <option value="">Pay Period</option>
-          {payPeriodList}
-        </select>
-        <select 
-          name="Province"
-          id="province-select"
-          onChange={event => handleUserInput(event)}
-        >
-          <option value="">Province</option>
-          {provinceList}
-        </select>
+        <div>
+          <label htmlFor="Payperiod">Pay Period</label>
+          <select 
+            name="PayPeriod"
+            id="payPeriod-select"
+            onChange={event => handleUserInput(event)}
+          >
+            <option value="">Pay Period</option>
+            {payPeriodList}
+          </select>
+        </div>
+
+        <div>
+          <label htmlFor="Province">Province</label>
+          <select 
+            name="Province"
+            id="province-select"
+            onChange={event => handleUserInput(event)}
+          >
+            <option value="">Province</option>
+            {provinceList}
+          </select>
+        </div>
         <button onClick={event => handleCalculation(event)}>Calculate</button>
       </form>}
       {mode === "SHOW" && <ShowCalculation state={salaryForm} cancel={onClose} CPP={state.CPP} EI={state.EI}/>}
