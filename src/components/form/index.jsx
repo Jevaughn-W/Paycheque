@@ -78,9 +78,10 @@ export default function Form() {
 
       {mode === "INPUT" && <form>
         
-        <div className="Form">
-          <label htmlFor="Salary">Salary</label>
+        <div className="form">
+          <label className="form" htmlFor="Salary">Salary</label>
           <input
+            className="form"
             type="text"
             name="Salary"
             placeholder="Salary"
@@ -90,15 +91,17 @@ export default function Form() {
 
         { payType === "hourly" && 
         <input
+          className="form"
           type="text"
           name="workHours"
           placeholder="workHours"
           onChange={event => handleUserInput(event)}
         />}
 
-        <div>
-          <label htmlFor="Payperiod">Pay Period</label>
+        <div className="form">
+          <label className="form" htmlFor="Payperiod">Pay Period</label>
           <select 
+            className="form"
             name="PayPeriod"
             id="payPeriod-select"
             onChange={event => handleUserInput(event)}
@@ -108,9 +111,10 @@ export default function Form() {
           </select>
         </div>
 
-        <div>
-          <label htmlFor="Province">Province</label>
+        <div className="form">
+          <label className="form" htmlFor="Province">Province</label>
           <select 
+            className="form"
             name="Province"
             id="province-select"
             onChange={event => handleUserInput(event)}
@@ -119,8 +123,8 @@ export default function Form() {
             {provinceList}
           </select>
         </div>
-        <button onClick={event => handleCalculation(event)}>Calculate</button>
       </form>}
+        <button onClick={event => handleCalculation(event)}>Calculate</button>
       {mode === "SHOW" && <ShowCalculation state={salaryForm} cancel={onClose} CPP={state.CPP} EI={state.EI}/>}
     </section>
   )
