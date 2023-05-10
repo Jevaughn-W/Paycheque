@@ -4,6 +4,9 @@ body {
   padding: 0px;
   font-family: Helvetica;
 }
+body h1 {
+  color: #003B73;
+}
 
 .application {
   display: flex;
