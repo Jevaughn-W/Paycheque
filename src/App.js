@@ -21,7 +21,7 @@ function App() {
       <ApplicationDataContext.Provider value={{state, setState}}> {/*set the context value to the state from the API*/}
         <NavigationBar/>
         <div className="body">
-          <h1>Paycheque Calculator</h1>
+          <h1>2023 Paycheque Calculator</h1>
           <span>
             {message}
           </span>
