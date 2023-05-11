@@ -34,27 +34,27 @@ export default function ShowCalculation(props) {
       </div>
       <table>
         <tr>
-          <td>Salary</td>
+          <td className="label">Salary</td>
           <td>${props.state.Salary}</td>
         </tr>
         <tr>
-          <td>Provincial Taxes</td>
+          <td className="label">Provincial Taxes</td>
           <td>${Math.round(props.state.provincialTax * 100) / 100}</td>
         </tr>
         <tr>
-          <td>Federal Taxes</td>
+          <td className="label">Federal Taxes</td>
           <td>${Math.round(props.state.federalTax * 100) /100}</td>
         </tr>
         <tr>
-          <td>Annual Net Salary:</td>
+          <td className="label">Annual Net Salary:</td>
           <td>${annualNetSalary}</td>
         </tr>
         <tr>
-          <td>Paystub - Includes CPP/EI:</td>
+          <td className="label">Paystub - Includes CPP/EI:</td>
           <td>${Math.round((paystub - CPP - EI) * 100)/ 100}</td>
         </tr>
         <tr>
-          <td>Paystub - Excludes CPP/EI:</td>
+          <td className="label">Paystub - Excludes CPP/EI:</td>
           <td>${paystub}</td>
         </tr>
       </table>
