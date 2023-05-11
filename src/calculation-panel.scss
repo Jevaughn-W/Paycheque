@@ -12,6 +12,7 @@ section.result {
   border-radius: 5px;
   box-shadow: 5px 5px 5px $navy-blue;
   font-family: $font-stack;  
+  width: 40%;
 }
 
 section {
@@ -32,4 +33,21 @@ section {
     color: $navy-blue;
   }
 
+}
+
+table {
+  margin-top: 2em;
+  width: 100%;
+
+}
+
+td {
+  border-bottom: 1px solid $navy-blue;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+td.label {
+  font-weight: 600;
+  color: $navy-blue;
 }

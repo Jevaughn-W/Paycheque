@@ -6,6 +6,7 @@ section.result {
   border-radius: 5px;
   box-shadow: 5px 5px 5px #003B73;
   font-family: Helvetica;
+  width: 40%;
 }
 
 section p {
@@ -21,6 +22,22 @@ section p {
 }
 .result-header h2 {
   margin: 0em;
+  color: #003B73;
+}
+
+table {
+  margin-top: 2em;
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid #003B73;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+td.label {
+  font-weight: 600;
   color: #003B73;
 }
 
