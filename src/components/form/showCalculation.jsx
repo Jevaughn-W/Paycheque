@@ -32,14 +32,32 @@ export default function ShowCalculation(props) {
       <div className="result-header">
         <h2>Tax Summary</h2>
       </div>
-      <div className="result-body">
-        <p><strong>Salary:</strong> ${props.state.Salary}</p>
-        <p><strong>Provincial Taxes:</strong> ${Math.round(props.state.provincialTax * 100) / 100}</p>
-        <p><strong>Federal Taxes:</strong> ${Math.round(props.state.federalTax * 100) /100}</p>
-        <p><strong>Annual Net Salary:</strong> ${annualNetSalary}</p>
-        <p><strong>Paystub - Includes CPP/EI:</strong> ${Math.round((paystub - CPP - EI) * 100)/ 100}</p>
-        <p><strong>Paystub - Excludes CPP/EI:</strong> ${paystub}</p>
-      </div>
+      <table>
+        <tr>
+          <td>Salary</td>
+          <td>${props.state.Salary}</td>
+        </tr>
+        <tr>
+          <td>Provincial Taxes</td>
+          <td>${Math.round(props.state.provincialTax * 100) / 100}</td>
+        </tr>
+        <tr>
+          <td>Federal Taxes</td>
+          <td>${Math.round(props.state.federalTax * 100) /100}</td>
+        </tr>
+        <tr>
+          <td>Annual Net Salary:</td>
+          <td>${annualNetSalary}</td>
+        </tr>
+        <tr>
+          <td>Paystub - Includes CPP/EI:</td>
+          <td>${Math.round((paystub - CPP - EI) * 100)/ 100}</td>
+        </tr>
+        <tr>
+          <td>Paystub - Excludes CPP/EI:</td>
+          <td>${paystub}</td>
+        </tr>
+      </table>
     </section>
   )
 
