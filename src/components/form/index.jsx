@@ -61,6 +61,20 @@ export default function Form() {
     setMode("INPUT");
   };
 
+
+  const hourlyInput = 
+  <div className="form">
+    <label className="form" htmlFor="workHours">Hours</label>
+    <input
+      className="form"
+      type="text"
+      name="workHours"
+      placeholder="Hours Per Week"
+      onChange={event => handleUserInput(event)}
+    />
+  </div>
+
+
   return (
     <section className="userInput">
 
@@ -89,14 +103,7 @@ export default function Form() {
           />
         </div>     
 
-        { payType === "hourly" && 
-        <input
-          className="form"
-          type="text"
-          name="workHours"
-          placeholder="workHours"
-          onChange={event => handleUserInput(event)}
-        />}
+        { payType === "hourly" && hourlyInput}
 
         <div className="form">
           <label className="form" htmlFor="Payperiod">Pay Period</label>
