@@ -3,6 +3,7 @@ import { calculateTax } from "../../helpers/paychequeCalculation";
 import ShowCalculation from  "./showCalculation";
 import { ApplicationDataContext } from "../../App"
 import '../../form.css';
+import '../../calculation-panel.css';
 
 
 // Options for the province drop down list

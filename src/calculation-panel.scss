@@ -1,0 +1,33 @@
+$font-stack: Helvetica;
+$primary-color: #68BBE3;
+$secondary-color: #0E86D4;
+$tertiary-color: white;
+$navy-blue: #003B73;
+
+section.result {
+  padding: 1em;
+  border: 1px solid $navy-blue;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px $navy-blue;
+  font-family: $font-stack;  
+}
+
+section {
+  p {
+    height: 2em;
+    padding: .8em;
+    border-bottom: 2mm ridge $primary-color;
+  }
+}
+
+.result-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+  h2 {
+    margin: 0em;
+    color: $navy-blue;
+  }
+
+}

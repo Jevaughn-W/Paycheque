@@ -1,0 +1,25 @@
+section.result {
+  padding: 1em;
+  border: 1px solid #003B73;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #003B73;
+  font-family: Helvetica;
+}
+
+section p {
+  height: 2em;
+  padding: 0.8em;
+  border-bottom: 2mm ridge #68BBE3;
+}
+
+.result-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.result-header h2 {
+  margin: 0em;
+  color: #003B73;
+}
+
+/*# sourceMappingURL=calculation-panel.css.map */
