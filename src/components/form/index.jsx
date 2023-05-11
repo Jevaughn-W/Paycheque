@@ -30,7 +30,6 @@ export default function Form() {
 
   
   const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null, 'PayPeriod': null});
-  const [mode, setMode] = useState("INPUT");
   const [payType, setPayType] = useState(null);
   
   // Function to create a controlled component with multiple components
@@ -53,12 +52,6 @@ export default function Form() {
     let EI = null;
 
     setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
-    setMode("SHOW");
-  };
-
-  // Function to handle closing results component
-  const onClose = ()=> {
-    setMode("INPUT");
   };
 
 
@@ -76,64 +69,66 @@ export default function Form() {
 
 
   return (
-    <section className="userInput">
+    <div className="panel">
+      <section className="userInput">
 
-        <fieldset className="radio">
-          <legend>Select Pay Type</legend>
-          <div className="radio">
-            <input className="radio" type="radio" id="salary" name="pay-type" value="salary" onClick={event => handleClick(event)}/>
-            <label className ="radio" htmlFor="salary">Salary</label>
+          <fieldset className="radio">
+            <legend>Select Pay Type</legend>
+            <div className="radio">
+              <input className="radio" type="radio" id="salary" name="pay-type" value="salary" onClick={event => handleClick(event)}/>
+              <label className ="radio" htmlFor="salary">Salary</label>
+            </div>
+            <div className="radio">
+              <input className ='radio' type="radio" id="hourly" name="pay-type" value="hourly" onClick={event => handleClick(event)}/>
+              <label className ="radio" htmlFor="hourly">Hourly</label>
+            </div>
+          </fieldset>
+
+        <form>
+
+          <div className="form">
+            <label className="form" htmlFor="Salary">Salary</label>
+            <input
+              className="form"
+              type="text"
+              name="Salary"
+              placeholder="$"
+              onChange={event => handleUserInput(event)}
+            />
+          </div>     
+
+          { payType === "hourly" && hourlyInput}
+
+          <div className="form">
+            <label className="form" htmlFor="Payperiod">Pay Period</label>
+            <select 
+              className="form"
+              name="PayPeriod"
+              id="payPeriod-select"
+              onChange={event => handleUserInput(event)}
+            >
+              <option value="">Pay Period</option>
+              {payPeriodList}
+            </select>
           </div>
-          <div className="radio">
-            <input className ='radio' type="radio" id="hourly" name="pay-type" value="hourly" onClick={event => handleClick(event)}/>
-            <label className ="radio" htmlFor="hourly">Hourly</label>
+
+          <div className="form">
+            <label className="form" htmlFor="Province">Province</label>
+            <select 
+              className="form"
+              name="Province"
+              id="province-select"
+              onChange={event => handleUserInput(event)}
+            >
+              <option value="">Province</option>
+              {provinceList}
+            </select>
           </div>
-        </fieldset>
-
-      {mode === "INPUT" && <form>
-        
-        <div className="form">
-          <label className="form" htmlFor="Salary">Salary</label>
-          <input
-            className="form"
-            type="text"
-            name="Salary"
-            placeholder="$"
-            onChange={event => handleUserInput(event)}
-          />
-        </div>     
-
-        { payType === "hourly" && hourlyInput}
-
-        <div className="form">
-          <label className="form" htmlFor="Payperiod">Pay Period</label>
-          <select 
-            className="form"
-            name="PayPeriod"
-            id="payPeriod-select"
-            onChange={event => handleUserInput(event)}
-          >
-            <option value="">Pay Period</option>
-            {payPeriodList}
-          </select>
-        </div>
-
-        <div className="form">
-          <label className="form" htmlFor="Province">Province</label>
-          <select 
-            className="form"
-            name="Province"
-            id="province-select"
-            onChange={event => handleUserInput(event)}
-          >
-            <option value="">Province</option>
-            {provinceList}
-          </select>
-        </div>
-      </form>}
-        <button onClick={event => handleCalculation(event)}>Calculate</button>
-      {mode === "SHOW" && <ShowCalculation state={salaryForm} cancel={onClose} CPP={state.CPP} EI={state.EI}/>}
-    </section>
+        </form>
+          <button onClick={event => handleCalculation(event)}>Calculate</button>
+      </section>
+      <ShowCalculation state={salaryForm} CPP={state.CPP} EI={state.EI}/>
+    </div>
   )
 
 };

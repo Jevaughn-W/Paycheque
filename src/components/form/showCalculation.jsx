@@ -31,12 +31,6 @@ export default function ShowCalculation(props) {
     <section className="result">
       <div className="result-header">
         <h2>Tax Summary</h2>
-        <img
-        className="close-button"
-          src="images/close.png"
-          alt="Close"
-          onClick={props.cancel}
-        />
       </div>
       <div className="result-body">
         <p><strong>Salary:</strong> ${props.state.Salary}</p>
