@@ -13,6 +13,7 @@ $navy-blue: #003B73;
   border: 1px solid  black;
   padding : 1em;
   border-radius: 8px;
+  box-shadow: 5px 5px 5px $navy-blue;
 }
 
 form {
@@ -36,6 +37,7 @@ fieldset {
   top: 1em;
   right: 1em;
   border-radius: 8px;
+  box-shadow: 5px 5px 5px $navy-blue;
 }
 
 .radio {
@@ -76,12 +78,13 @@ label.form {
 select.form {
   width: 15em;
   height: 2.5em;
-
+  color: $navy-blue
 }
 
 input.form {
   width: 14.5em;
   height: 2.0em;
+  color: $navy-blue
 }
 
 /*Form calculate Button*/

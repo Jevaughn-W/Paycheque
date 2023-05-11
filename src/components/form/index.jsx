@@ -84,7 +84,7 @@ export default function Form() {
             className="form"
             type="text"
             name="Salary"
-            placeholder="Salary"
+            placeholder="$"
             onChange={event => handleUserInput(event)}
           />
         </div>     

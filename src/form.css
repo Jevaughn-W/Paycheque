@@ -7,6 +7,7 @@
   border: 1px solid black;
   padding: 1em;
   border-radius: 8px;
+  box-shadow: 5px 5px 5px #003B73;
 }
 
 form {
@@ -29,6 +30,7 @@ fieldset {
   top: 1em;
   right: 1em;
   border-radius: 8px;
+  box-shadow: 5px 5px 5px #003B73;
 }
 
 .radio {
@@ -67,11 +69,13 @@ label.form {
 select.form {
   width: 15em;
   height: 2.5em;
+  color: #003B73;
 }
 
 input.form {
   width: 14.5em;
   height: 2em;
+  color: #003B73;
 }
 
 /*Form calculate Button*/
