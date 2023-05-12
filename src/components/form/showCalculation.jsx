@@ -11,9 +11,9 @@ export default function ShowCalculation(props) {
     'Bi-Weekly': 26
   };
 
-  let preTaxSalary = props.state.Salary / payPeriods[props.state.PayPeriod];
-  let annualNetSalary = Math.round((props.state.Salary - props.state.provincialTax - props.state.federalTax) * 100) / 100;
-  let paystub = Math.round(((props.state.Salary - props.state.provincialTax - props.state.federalTax)/payPeriods[props.state.PayPeriod])* 100) / 100;
+  let preTaxSalary = props.state.annualSalary / payPeriods[props.state.PayPeriod];
+  let annualNetSalary = Math.round((props.state.annualSalary - props.state.provincialTax - props.state.federalTax) * 100) / 100;
+  let paystub = Math.round(((props.state.annualSalary - props.state.provincialTax - props.state.federalTax)/payPeriods[props.state.PayPeriod])* 100) / 100;
   let CPP = Math.round((preTaxSalary * props.CPP.rate)*100) / 100;
 
   // Function to calculate how much EI is based on salary cap
@@ -35,7 +35,7 @@ export default function ShowCalculation(props) {
       <table>
         <tr>
           <td className="label">Salary</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.Salary ? props.state.Salary : 0)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.annualSalary ? props.state.annualSalary : 0)}</td>
         </tr>
         <tr>
           <td className="label">Provincial Taxes</td>
