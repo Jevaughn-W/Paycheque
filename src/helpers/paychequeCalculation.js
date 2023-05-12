@@ -52,4 +52,13 @@ const calculateTax = (salaryArr, taxArr, userSalary) => {
 };
 
 
-export { calculateTax }
+const calculateAnnualSalary = (salaryForm) => {
+  if(salaryForm.workHours) {
+    return salaryForm.salary * salaryForm.workHours * 52;  // Calculate hourly person rate by the hours per week and assuming 52 weeks per year
+  } else {
+    return salaryForm.salary;
+  }
+};
+
+
+export { calculateTax, calculateAnnualSalary }
