@@ -35,27 +35,27 @@ export default function ShowCalculation(props) {
       <table>
         <tr>
           <td className="label">Salary</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.Salary)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.Salary ? props.state.Salary : 0)}</td>
         </tr>
         <tr>
           <td className="label">Provincial Taxes</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.provincialTax)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.provincialTax ? props.state.provincialTax : 0)}</td>
         </tr>
         <tr>
           <td className="label">Federal Taxes</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.federalTax)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.federalTax ? props.state.federalTax : 0)}</td>
         </tr>
         <tr>
           <td className="label">Annual Net Salary:</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(annualNetSalary)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(annualNetSalary ? annualNetSalary : 0)}</td>
         </tr>
         <tr>
           <td className="label">Paystub - Before CPP/EI:</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(paystub)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(paystub ? paystub :0 )}</td>
         </tr>
         <tr>
           <td className="label">Paystub - After CPP/EI:</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(paystub - CPP - EI)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format((paystub - CPP - EI) ? (paystub - CPP - EI) : 0 )}</td>
         </tr>
       </table>
     </section>
