@@ -35,27 +35,27 @@ export default function ShowCalculation(props) {
       <table>
         <tr>
           <td className="label">Salary</td>
-          <td>${props.state.Salary}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.Salary)}</td>
         </tr>
         <tr>
           <td className="label">Provincial Taxes</td>
-          <td>${Math.round(props.state.provincialTax * 100) / 100}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.provincialTax)}</td>
         </tr>
         <tr>
           <td className="label">Federal Taxes</td>
-          <td>${Math.round(props.state.federalTax * 100) /100}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.federalTax)}</td>
         </tr>
         <tr>
           <td className="label">Annual Net Salary:</td>
-          <td>${annualNetSalary}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(annualNetSalary)}</td>
         </tr>
         <tr>
-          <td className="label">Paystub - Includes CPP/EI:</td>
-          <td>${Math.round((paystub - CPP - EI) * 100)/ 100}</td>
+          <td className="label">Paystub - Before CPP/EI:</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(paystub)}</td>
         </tr>
         <tr>
-          <td className="label">Paystub - Excludes CPP/EI:</td>
-          <td>${paystub}</td>
+          <td className="label">Paystub - After CPP/EI:</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(paystub - CPP - EI)}</td>
         </tr>
       </table>
     </section>
