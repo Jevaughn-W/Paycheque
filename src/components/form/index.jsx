@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { calculateTax } from "../../helpers/paychequeCalculation";
+import { calculateTax, calculateAnnualSalary } from "../../helpers/paychequeCalculation";
 import ShowCalculation from  "./showCalculation";
 import { ApplicationDataContext } from "../../App"
 import '../../form.css';
@@ -49,8 +49,10 @@ export default function Form() {
 
     let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, salaryForm.Salary);
     let federalTax = calculateTax( state.federal.salary, state.federal.rates, salaryForm.Salary);
+    let annualSalary = calculateAnnualSalary(salaryForm); // Kept in capital so that the varible serves as a key and replaces the original
 
-    setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
+    setSalaryForm(prev => ({...prev, provincialTax, federalTax, annualSalary}));
+
   };
 
 
