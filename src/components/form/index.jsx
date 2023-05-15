@@ -47,9 +47,10 @@ export default function Form() {
     event.preventDefault();
 
 
-    let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, salaryForm.Salary);
-    let federalTax = calculateTax( state.federal.salary, state.federal.rates, salaryForm.Salary);
     let annualSalary = calculateAnnualSalary(salaryForm); // Kept in capital so that the varible serves as a key and replaces the original
+    
+    let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, annualSalary);
+    let federalTax = calculateTax( state.federal.salary, state.federal.rates, annualSalary);
 
     setSalaryForm(prev => ({...prev, provincialTax, federalTax, annualSalary}));
 
