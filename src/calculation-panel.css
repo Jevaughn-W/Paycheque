@@ -2,9 +2,9 @@ section.result {
   margin-top: 3em;
   margin-bottom: 3em;
   padding: 1em;
-  border: 1px solid #003B73;
+  border: 1px solid #023047;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px #003B73;
+  box-shadow: 5px 5px 5px #023047;
   font-family: Helvetica;
   width: 40%;
 }
@@ -12,33 +12,35 @@ section.result {
 section p {
   height: 2em;
   padding: 0.8em;
-  border-bottom: 2mm ridge #68BBE3;
+  border-bottom: 2mm ridge #023047;
 }
 
 .result-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 .result-header h2 {
   margin: 0em;
-  color: #003B73;
+  color: #023047;
+  text-align: center;
 }
 
 table {
   margin-top: 2em;
   width: 100%;
+  border-collapse: collapse;
 }
 
 td {
-  border-bottom: 1px solid #003B73;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  border-bottom: 1px solid #023047;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
 
 td.label {
   font-weight: 600;
-  color: #003B73;
+  color: #023047;
 }
 
 /*# sourceMappingURL=calculation-panel.css.map */
