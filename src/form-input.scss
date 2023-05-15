@@ -1,8 +1,7 @@
 $font-stack: Helvetica;
-$primary-color: #68BBE3;
-$secondary-color: #0E86D4;
-$tertiary-color: white;
-$navy-blue: #003B73;
+$primary-color:#023047;
+$secondary-color: #ffb703;
+$tertiary-color: #fff;
 
 .userInput {
   margin-top: 3em;
@@ -13,7 +12,7 @@ $navy-blue: #003B73;
   border: 1px solid  black;
   padding : 1em;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px $navy-blue;
+  box-shadow: 5px 5px 5px $primary-color;
 }
 
 form {
@@ -37,7 +36,7 @@ fieldset {
   top: 1em;
   right: 1em;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px $navy-blue;
+  box-shadow: 5px 5px 5px $primary-color;
 }
 
 .radio {
@@ -46,13 +45,13 @@ fieldset {
   align-content: center;
   legend {
     font-weight: 600;
-    color: $navy-blue;
+    color: $primary-color;
   }
 }
 
 input.radio {
   margin:auto;
-
+  accent-color: $primary-color;
 }
 
 label.radio {
@@ -72,19 +71,18 @@ div.form {
 label.form {
   width: 6.5em;
   font-weight: 600;
-  color: $navy-blue;
+  color: $primary-color;
 }
 
 select.form {
   width: 15em;
   height: 2.5em;
-  color: $navy-blue
+  color: $primary-color
 }
 
 input.form {
   width: 14.5em;
   height: 2.0em;
-  color: $navy-blue
 }
 
 /*Form calculate Button*/
@@ -95,12 +93,13 @@ button {
   height: 2em;
   bottom: 1em;
   right: 1em;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   color: $tertiary-color;
   border: none;
   border-radius: 8px;
 }
 
 button:hover {
-  background-color: $navy-blue;
+  background-color: $secondary-color;
+  color: $primary-color;
 }

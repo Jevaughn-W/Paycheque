@@ -7,7 +7,7 @@
   border: 1px solid black;
   padding: 1em;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #003B73;
+  box-shadow: 5px 5px 5px #023047;
 }
 
 form {
@@ -30,7 +30,7 @@ fieldset {
   top: 1em;
   right: 1em;
   border-radius: 8px;
-  box-shadow: 5px 5px 5px #003B73;
+  box-shadow: 5px 5px 5px #023047;
 }
 
 .radio {
@@ -40,11 +40,12 @@ fieldset {
 }
 .radio legend {
   font-weight: 600;
-  color: #003B73;
+  color: #023047;
 }
 
 input.radio {
   margin: auto;
+  accent-color: #023047;
 }
 
 label.radio {
@@ -63,19 +64,18 @@ div.form {
 label.form {
   width: 6.5em;
   font-weight: 600;
-  color: #003B73;
+  color: #023047;
 }
 
 select.form {
   width: 15em;
   height: 2.5em;
-  color: #003B73;
+  color: #023047;
 }
 
 input.form {
   width: 14.5em;
   height: 2em;
-  color: #003B73;
 }
 
 /*Form calculate Button*/
@@ -85,14 +85,15 @@ button {
   height: 2em;
   bottom: 1em;
   right: 1em;
-  background-color: #0E86D4;
-  color: white;
+  background-color: #023047;
+  color: #fff;
   border: none;
   border-radius: 8px;
 }
 
 button:hover {
-  background-color: #003B73;
+  background-color: #ffb703;
+  color: #023047;
 }
 
 /*# sourceMappingURL=form.css.map */
