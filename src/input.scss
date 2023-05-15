@@ -1,8 +1,8 @@
 $font-stack: Helvetica;
-$primary-color: #68BBE3;
-$secondary-color: #0E86D4;
-$tertiary-color: white;
-$navy-blue: #003B73;
+$primary-color:#023047;
+$secondary-color: #ffb703;
+$tertiary-color: #fff;
+
 
 
 body {
@@ -11,7 +11,7 @@ body {
   padding: 0px;
   font-family: $font-stack;
   h1{
-    color: $navy-blue;
+    color: $primary-color;
   }
 }
 
@@ -26,7 +26,7 @@ body {
   height: 80px;
   margin: 0;
   padding:0px;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
@@ -39,7 +39,7 @@ body {
   }
 
   a:hover {
-    color: $navy-blue;
+    color: $secondary-color;
   }
 
   a:active {
@@ -51,7 +51,7 @@ body {
   height: 80px;
   margin: 0;
   padding:0px;
-  background-color: $secondary-color;
+  background-color: $primary-color;
   display: flex;
   justify-content: center;
   font-weight: bold;
