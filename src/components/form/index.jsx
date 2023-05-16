@@ -47,7 +47,7 @@ export default function Form() {
     event.preventDefault();
 
 
-    let annualSalary = calculateAnnualSalary(salaryForm); // Kept in capital so that the varible serves as a key and replaces the original
+    let annualSalary = calculateAnnualSalary(salaryForm, payType); // Kept in capital so that the varible serves as a key and replaces the original
     
     let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, annualSalary);
     let federalTax = calculateTax( state.federal.salary, state.federal.rates, annualSalary);
@@ -129,7 +129,7 @@ export default function Form() {
         </form>
           <button onClick={event => handleCalculation(event)}>Calculate</button>
       </section>
-      <ShowCalculation state={salaryForm} CPP={state.CPP} EI={state.EI}/>
+      <ShowCalculation state={salaryForm} CPP={state.CPP} EI={state.EI} payType={payType}/>
     </div>
   )
 
