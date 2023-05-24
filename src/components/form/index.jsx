@@ -4,6 +4,7 @@ import ShowCalculation from  "./showCalculation";
 import { ApplicationDataContext } from "../../App"
 import '../../form.css';
 import '../../calculation-panel.css';
+import axios from "axios";
 
 
 // Options for the province drop down list
@@ -53,6 +54,8 @@ export default function Form() {
     let federalTax = calculateTax( state.federal.salary, state.federal.rates, annualSalary);
 
     setSalaryForm(prev => ({...prev, provincialTax, federalTax, annualSalary}));
+
+    axios.get(`http://localhost:8080/${salaryForm.Province}`); // Makes get request for the rates
 
   };
 
