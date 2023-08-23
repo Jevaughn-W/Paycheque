@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["LandingPage.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA","file":"LandingPage.css"}
+{"version":3,"sourceRoot":"","sources":["LandingPage.scss","../../_variables.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA,OCdiB;;;ADiBnB;EACE,kBCjBsB","file":"LandingPage.css"}

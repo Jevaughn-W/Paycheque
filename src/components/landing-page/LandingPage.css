@@ -8,4 +8,13 @@
   justify-content: center;
 }
 
+h2 {
+  font-family: "Kaushan Script";
+  color: #F652A0;
+}
+
+span {
+  background-color: #BCECE0;
+}
+
 /*# sourceMappingURL=LandingPage.css.map */
