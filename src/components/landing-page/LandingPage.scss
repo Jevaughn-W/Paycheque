@@ -13,8 +13,25 @@
 h2{
   font-family: 'Kaushan Script';
   color: $main-theme-color;
+  font-size: 92px;
+}
+
+h4{
+  color: $tertiary-theme-color;
+  font-family: 'Kaushan Script';
+  font-size: 40px ;
 }
 
 span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  height: 2em;
   background-color: $secondary-theme-color;
+  color: $tertiary-theme-color;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

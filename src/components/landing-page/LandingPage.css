@@ -17,10 +17,27 @@
 h2 {
   font-family: "Kaushan Script";
   color: #F652A0;
+  font-size: 92px;
+}
+
+h4 {
+  color: #4C5270;
+  font-family: "Kaushan Script";
+  font-size: 40px;
 }
 
 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  height: 2em;
   background-color: #BCECE0;
+  color: #4C5270;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=LandingPage.css.map */
