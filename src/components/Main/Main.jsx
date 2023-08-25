@@ -1,11 +1,10 @@
 import NavigationBar from '../navigation';
-import Footer from '../footer';
+import "./main.css";
 
 export default function Main() {
   return (
     <div className="main">
       <NavigationBar/>
-      <Footer/>
     </div>
 
   )
