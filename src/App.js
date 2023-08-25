@@ -1,10 +1,8 @@
 import './index.css';
-import NavigationBar from './components/navigation/index.jsx';
-import Form from './components/form';
-import Footer from './components/footer';
 import { createContext } from 'react';
 import useApplicationData from './hooks/useApplicationData';
 import LandingPage from './components/landing-page/LandingPage';
+import Main from './components/Main/Main';
 
 
 const message = "Our post tax salary calculator can help you better estimate your paystub following taxes, deductions and other garnishments. Please enter your salary and anticipated deduction and press calculate to get you estimate.";
@@ -21,15 +19,7 @@ function App() {
     <div className="application">
       <ApplicationDataContext.Provider value={{state, setState}}> {/*set the context value to the state from the API*/}
         <LandingPage/>
-        <NavigationBar/>
-        <div className="body">
-          <h1>2023 Paycheque Calculator</h1>
-          <span>
-            {message}
-          </span>
-        <Form/>
-        </div>
-        <Footer/>
+        <Main/>
     </ApplicationDataContext.Provider>
     </div>
   );
