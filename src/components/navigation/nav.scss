@@ -1,0 +1,13 @@
+@import '../variables';
+
+
+.navigation{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  h2 a{
+    color: $main-theme-color;
+    text-decoration: none;
+  }
+}

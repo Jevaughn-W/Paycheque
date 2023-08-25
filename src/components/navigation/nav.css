@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("../../assets/fonts/KaushanScript-Regular.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
+.navigation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.navigation h2 a {
+  color: #F652A0;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=nav.css.map */
