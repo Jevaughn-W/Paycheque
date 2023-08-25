@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("../../assets/fonts/KaushanScript-Regular.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
 .landing-page {
   width: 100%;
   height: 100vh;
