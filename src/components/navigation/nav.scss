@@ -4,10 +4,24 @@
 .navigation{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
+  margin: auto;
 
-  h2 a{
+  h2.nav-title{
     color: $main-theme-color;
     text-decoration: none;
+    font-size: 36px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1em;
+  }
+
+  li{
+    display: inline-block;
+    margin-right: 1em;
+    font-family: 'Kaushan Script';
+    color: $tertiary-theme-color;
+    font-size: 1.5em;
   }
 }

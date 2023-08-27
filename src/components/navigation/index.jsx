@@ -5,7 +5,7 @@ export default function NavigationBar() {
 
   return(
     <nav className="navigation">
-      <h2><a href="/">PayCheque</a></h2>
+      <h2 className='nav-title'>PayCheque</h2>
 
       <ul>
         <li>PayCheque Calculator</li>

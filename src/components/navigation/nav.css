@@ -7,11 +7,24 @@
 .navigation {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
+  margin: auto;
 }
-.navigation h2 a {
+.navigation h2.nav-title {
   color: #F652A0;
   text-decoration: none;
+  font-size: 36px;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 1em;
+}
+.navigation li {
+  display: inline-block;
+  margin-right: 1em;
+  font-family: "Kaushan Script";
+  color: #4C5270;
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=nav.css.map */
