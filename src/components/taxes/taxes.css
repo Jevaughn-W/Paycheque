@@ -1,27 +1,43 @@
-/*Formatting form input and labels*/
-div.form {
-  width: 100%;
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("../../assets/fonts/KaushanScript-Regular.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
+.userInput {
+  width: 50%;
+}
+.userInput .form {
+  margin-bottom: 0.2em;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 0.5em;
+  justify-content: space-between;
 }
-
-label.form {
-  width: 6.5em;
-  font-weight: 600;
-  color: #023047;
-}
-
-select.form {
+.userInput .form select {
   width: 15em;
-  height: 2.5em;
-  color: #023047;
-}
-
-input.form {
-  width: 14.5em;
   height: 2em;
+  border: solid 1px #F652A0;
+  border-radius: 5px;
+  color: #4C5270;
+}
+.userInput .form input {
+  width: 14.6em;
+  height: 1.7em;
+  border: solid 1px #F652A0;
+  border-radius: 5px;
+  color: #4C5270;
+}
+.userInput .form label {
+  color: #4C5270;
+}
+.userInput button {
+  margin-top: 1em;
+  width: 10em;
+  height: 2em;
+  color: #4C5270;
+  background-color: #BCECE0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
-/*# sourceMappingURL=form.css.map */
+/*# sourceMappingURL=taxes.css.map */

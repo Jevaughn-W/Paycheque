@@ -1,34 +1,50 @@
-$font-stack: Helvetica;
-$primary-color:#023047;
-$secondary-color: #ffb703;
-$tertiary-color: #fff;
+@import '../variables';
 
 
-/*Formatting form input and labels*/
 
-div.form {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin: 0.5em;
+.userInput{
+  width: 50%;
+
+  
+  // Add space to the bottom of the form divs
+  .form { 
+    margin-bottom: .2em;
+    display: flex;
+    justify-content: space-between; // Done to get even spacing between the labels and the input boxes
+    
+    select { // Input and select have a different length when combined together
+      width: 15em;
+      height: 2em;
+      border: solid 1px $main-theme-color;
+      border-radius: 5px;
+      color: $tertiary-theme-color;
+    }
+    input {
+      width: 14.6em;
+      height: 1.7em;
+      border: solid 1px $main-theme-color;
+      border-radius: 5px;
+      color: $tertiary-theme-color;
+    }
+
+    label {
+      color: $tertiary-theme-color;
+    }
+  }
+
+
+  button {
+    margin-top: 1em;
+    width: 10em;
+    height: 2em;
+    color: $tertiary-theme-color;
+    background-color: $secondary-theme-color;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
 }
 
-label.form {
-  width: 6.5em;
-  font-weight: 600;
-  color: $primary-color;
-}
-
-select.form {
-  width: 15em;
-  height: 2.5em;
-  color: $primary-color
-}
-
-input.form {
-  width: 14.5em;
-  height: 2.0em;
-}
 
 
