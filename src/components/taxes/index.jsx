@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { calculateTax, calculateAnnualSalary } from "../../helpers/paychequeCalculation";
+import { calculateTax } from "../../helpers/paychequeCalculation";
 import { ApplicationDataContext } from "../../App"
 import './taxes.css';
 import axios from "axios";
@@ -30,7 +30,6 @@ export default function Taxes() {
 
   
   const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null, 'PayPeriod': null});
-  const [payType, setPayType] = useState(null);
   
   // Function to create a controlled component with multiple components
   const handleUserInput = (event)=> {
@@ -41,13 +40,10 @@ export default function Taxes() {
   const handleCalculation = (event) => {
     event.preventDefault();
 
+    let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, salaryForm.Salary); // Send salary provided to calculate the provincial tax
+    let federalTax = calculateTax( state.federal.salary, state.federal.rates, salaryForm.Salary); // Send salary provided to calculate the federal tax
 
-    let annualSalary = calculateAnnualSalary(salaryForm, payType); // Kept in capital so that the varible serves as a key and replaces the original
-    
-    let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, annualSalary);
-    let federalTax = calculateTax( state.federal.salary, state.federal.rates, annualSalary);
-
-    setSalaryForm(prev => ({...prev, provincialTax, federalTax, annualSalary}));
+    setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
 
     axios.get(`http://localhost:8080/${salaryForm.Province}`); // Makes get request for the rates
 
