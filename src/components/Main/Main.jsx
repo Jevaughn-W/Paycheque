@@ -8,7 +8,7 @@ export default function Main() {
       <NavigationBar/>
       <div className='content'>
         <Taxes/>
-        <
+      
 
       </div>
     </div>

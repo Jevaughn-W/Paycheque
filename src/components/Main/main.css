@@ -2,4 +2,12 @@
   height: 100vh;
 }
 
+div.content {
+  width: 90%;
+  margin: auto;
+  margin-top: 5em;
+  display: flex;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=main.css.map */
