@@ -6,7 +6,11 @@ export default function Main() {
   return (
     <div className="main">
       <NavigationBar/>
-      <Taxes/>
+      <div className='content'>
+        <Taxes/>
+        <
+
+      </div>
     </div>
 
   )
