@@ -3,60 +3,6 @@ $primary-color:#023047;
 $secondary-color: #ffb703;
 $tertiary-color: #fff;
 
-.userInput {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  width: 30%;
-  height: 45vh;
-  position: relative;
-  border: 1px solid  black;
-  padding : 1em;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px $primary-color;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  margin: auto;
-  margin-top:5em;
-  margin-bottom:2em;
-  width: 100%;
-}
-
-/* Formatting radio */
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width : 55%;
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px $primary-color;
-}
-
-.radio {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  legend {
-    font-weight: 600;
-    color: $primary-color;
-  }
-}
-
-input.radio {
-  margin:auto;
-  accent-color: $primary-color;
-}
-
-label.radio {
-  margin-left: 1em;
-}
 
 /*Formatting form input and labels*/
 
@@ -85,21 +31,4 @@ input.form {
   height: 2.0em;
 }
 
-/*Form calculate Button*/
 
-button {
-  position: absolute;
-  width : 20%;
-  height: 2em;
-  bottom: 1em;
-  right: 1em;
-  background-color: $primary-color;
-  color: $tertiary-color;
-  border: none;
-  border-radius: 8px;
-}
-
-button:hover {
-  background-color: $secondary-color;
-  color: $primary-color;
-}

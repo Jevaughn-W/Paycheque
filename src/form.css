@@ -1,57 +1,3 @@
-.userInput {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  width: 30%;
-  height: 45vh;
-  position: relative;
-  border: 1px solid black;
-  padding: 1em;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px #023047;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  margin: auto;
-  margin-top: 5em;
-  margin-bottom: 2em;
-  width: 100%;
-}
-
-/* Formatting radio */
-fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 55%;
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px #023047;
-}
-
-.radio {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-}
-.radio legend {
-  font-weight: 600;
-  color: #023047;
-}
-
-input.radio {
-  margin: auto;
-  accent-color: #023047;
-}
-
-label.radio {
-  margin-left: 1em;
-}
-
 /*Formatting form input and labels*/
 div.form {
   width: 100%;
@@ -76,24 +22,6 @@ select.form {
 input.form {
   width: 14.5em;
   height: 2em;
-}
-
-/*Form calculate Button*/
-button {
-  position: absolute;
-  width: 20%;
-  height: 2em;
-  bottom: 1em;
-  right: 1em;
-  background-color: #023047;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-}
-
-button:hover {
-  background-color: #ffb703;
-  color: #023047;
 }
 
 /*# sourceMappingURL=form.css.map */
