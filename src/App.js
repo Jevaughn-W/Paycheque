@@ -5,8 +5,6 @@ import LandingPage from './components/landing-page/LandingPage';
 import Main from './components/Main/Main';
 
 
-const message = "Our post tax salary calculator can help you better estimate your paystub following taxes, deductions and other garnishments. Please enter your salary and anticipated deduction and press calculate to get you estimate.";
-
 // Create intial context - need to export to be able to access in lower components
 export const ApplicationDataContext = createContext(null);
 
