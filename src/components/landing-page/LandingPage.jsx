@@ -7,7 +7,7 @@ export default function LandingPage() {
     <div className='landing-page'>
       <h2>PayCheque</h2>
       <h4>Your finance Questions Answered</h4>
-      <span>Enter Site</span>
+      <a href='#main'><span>Enter Site</span></a>
     </div>
   )
 }
