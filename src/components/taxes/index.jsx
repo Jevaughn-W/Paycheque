@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { calculateTax } from "../../helpers/paychequeCalculation";
 import './taxes.css';
-import axios from "axios";
 
 
 // Options for the province drop down list
@@ -35,11 +33,6 @@ export default function Taxes(props) {
   // Function to do an action once the salary and province has been provided - to be updated to provide a calculation
   const handleCalculation = (event) => {
     event.preventDefault();
-
-    // let provincialTax = calculateTax(state.ontario.salary, state.ontario.rates, salaryForm.Salary); // Send salary provided to calculate the provincial tax
-    // let federalTax = calculateTax( state.federal.salary, state.federal.rates, salaryForm.Salary); // Send salary provided to calculate the federal tax
-
-    // setSalaryForm(prev => ({...prev, provincialTax, federalTax}));
 
     props.setState(prev => ({...prev, salaryForm }))
 
