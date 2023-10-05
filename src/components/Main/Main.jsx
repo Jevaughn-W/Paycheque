@@ -13,8 +13,8 @@ export default function Main() {
     <div className="main" id="main">
       <NavigationBar/>
       <div className='content'>
-        <Taxes />
-        <ShowCalculation/>
+        <Taxes state={state} setState={setState}/>
+        <ShowCalculation state={state} setState={setState}/>
 
       </div>
     </div>
