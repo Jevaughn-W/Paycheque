@@ -35,7 +35,7 @@ export default function ShowCalculation(props) {
       <table>
         <tr>
           <td className="label">Salary</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(0)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.salaryForm.Salary)}</td>
         </tr>
         <tr>
           <td className="label">Provincial Taxes</td>
