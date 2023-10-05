@@ -13,20 +13,28 @@
   align-items: center;
   justify-content: center;
 }
-
-h2 {
+.landing-page h2 {
   font-family: "Kaushan Script";
   color: #F652A0;
   font-size: 92px;
 }
-
-h4 {
+.landing-page h4 {
   color: #4C5270;
   font-family: "Kaushan Script";
   font-size: 40px;
 }
-
-span {
+.landing-page a {
+  text-decoration: none;
+}
+@keyframes fadeInAndOut {
+  0%, 100% {
+    opacity: 1; /* Start and end opacity: fully visible */
+  }
+  50% {
+    opacity: 0.5; /* Middle of the animation: fully transparent */
+  }
+}
+.landing-page span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,11 +46,13 @@ span {
   font-weight: bold;
   border-radius: 10px;
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  animation: fadeInAndOut 3s ease-in-out infinite;
 }
-
-span:hover {
+.landing-page span:active {
   background-color: #F652A0;
   color: white;
 }
+
+
 
 /*# sourceMappingURL=LandingPage.css.map */

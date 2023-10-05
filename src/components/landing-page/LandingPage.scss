@@ -26,6 +26,20 @@
     font-size: 40px;
   }
 
+  a {
+    text-decoration: none;
+  }
+
+  // Key frames defines how the animation works
+  @keyframes fadeInAndOut {
+    0%, 100% {
+      opacity: 1; /* Start and end opacity: fully visible */
+    }
+    50% {
+      opacity: .5; /* Middle of the animation: fully transparent */
+    }
+  }
+
   span {
     display: flex;
     justify-content: center;
@@ -38,9 +52,10 @@
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    animation: fadeInAndOut 3s ease-in-out infinite; // Adds the custom animation and its timing
   }
 
-  span:hover {
+  span:active {
     background-color: #F652A0;
     color: white;
   }
