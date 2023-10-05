@@ -49,14 +49,6 @@ export default function ShowCalculation(props) {
           <td className="label">Annual Net Salary:</td>
           <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</td>
         </tr>
-        <tr>
-          <td className="label">Paystub - Before CPP/EI:</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(0 )}</td>
-        </tr>
-        <tr>
-          <td className="label">Paystub - After CPP/EI:</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(0)}</td>
-        </tr>
       </table>
     </section>
   )
