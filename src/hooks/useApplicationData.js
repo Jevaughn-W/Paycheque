@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // let APIData = {
 //   'provincialSalaryBrackets' : [46226, 92454, 150000, 220000],
