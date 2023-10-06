@@ -9,11 +9,13 @@ export default function ShowCalculation(props) {
   return(
     <section className="result">
       <div className="result-header">
-        <h2>Tax Summary</h2>
+        <h3>Estimated Taxes Owed</h3>
+        <span>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</span>
       </div>
+
       <table>
         <tr>
-          <td className="label">Salary</td>
+          <td className="label">Total Income</td>
           <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.salaryForm.Salary)}</td>
         </tr>
         <tr>
@@ -25,8 +27,24 @@ export default function ShowCalculation(props) {
           <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.Federal)}</td>
         </tr>
         <tr>
-          <td className="label">Annual Net Salary:</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</td>
+          <td className="label">CPP/EI Premiums</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.Federal)}</td>
+        </tr>
+        <tr>
+          <td className="label bolded">Total Tax</td>
+          <td className="bolded">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</td>
+        </tr>
+        <tr>
+          <td className="label bolded">After-Tax Income</td>
+          <td className="bolded">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</td>
+        </tr>
+        <tr>
+          <td className="label bolded">Average Tax Rate</td>
+          <td className="bolded">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</td>
+        </tr>
+        <tr>
+          <td className="label bolded">Marginal Tax Rate</td>
+          <td className="bolded">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format( 0)}</td>
         </tr>
       </table>
     </section>
