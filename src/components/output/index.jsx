@@ -4,12 +4,6 @@ import React from "react";
 
 export default function ShowCalculation(props) {
 
-  const payPeriods = {
-    'Annually' : 1,
-    'Monthly' : 12,
-    'Semi-Monthly' : 24,
-    'Bi-Weekly': 26
-  };
 
   // let preTaxSalary = props.state.annualSalary / payPeriods[props.state.PayPeriod];
   // let annualNetSalary = Math.round((props.state.annualSalary - props.state.provincialTax - props.state.federalTax) * 100) / 100;
