@@ -18,6 +18,7 @@
   border: solid 1px #F652A0;
   border-radius: 5px;
   color: #4C5270;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .userInput .form input {
   width: 14.6em;
@@ -25,6 +26,7 @@
   border: solid 1px #F652A0;
   border-radius: 5px;
   color: #4C5270;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .userInput .form label {
   color: #4C5270;
