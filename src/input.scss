@@ -1,96 +1,10 @@
-$font-stack: Helvetica;
-$primary-color:#023047;
-$secondary-color: #ffb703;
-$tertiary-color: #fff;
-
-
+@font-face{
+  font-family:'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight: normal;
+  font-size: normal;
+}
 
 body {
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  font-family: $font-stack;
-  h1{
-    color: $primary-color;
-  }
-}
-
-.application {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.navigation {
-  width: 100%;
-  height: 80px;
-  margin: 0;
-  padding:0px;
-  background-color: $primary-color;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 1.3em;
-  color: $tertiary-color;
-
-  a{
-    color: $tertiary-color;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: $secondary-color;
-  }
-
-  a:active {
-    color : red;
-  }
-}
-.footer {
-  width: 100%;
-  height: 80px;
-  margin: 0;
-  padding:0px;
-  background-color: $primary-color;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.3em;
-  color: $tertiary-color;
-  li {
-    display: inline-block;
-    padding: .5em;
-  }
-}
-
-.body{
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-  h1{
-    text-align: center;
-  }
-}
-
-nav {
-  h2 {
-    padding-left: 1em;
-  }
-  li {
-    display: inline-block;
-    padding: .5em;
-  }
-}
-
-// results details
-
-.panel{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 1em;
-  margin: auto;
-  width: 100%;
+  font-family: 'Inter';
 }
