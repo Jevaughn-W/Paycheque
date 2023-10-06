@@ -25,7 +25,8 @@ export default function useApplicationData() {
       'CPP' : {
         'rate': 0.0595,
         'maxContribution' : 3754
-      }
+      },
+      'salaryForm': {'Salary': 0, 'Province': null, 'PayPeriod': null}
     }
   );
 
