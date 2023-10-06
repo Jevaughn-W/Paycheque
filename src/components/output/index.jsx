@@ -5,22 +5,6 @@ import React from "react";
 export default function ShowCalculation(props) {
 
 
-  // let preTaxSalary = props.state.annualSalary / payPeriods[props.state.PayPeriod];
-  // let annualNetSalary = Math.round((props.state.annualSalary - props.state.provincialTax - props.state.federalTax) * 100) / 100;
-  // let paystub = Math.round(((props.state.annualSalary - props.state.provincialTax - props.state.federalTax)/payPeriods[props.state.PayPeriod])* 100) / 100;
-  // let CPP = Math.round((preTaxSalary * props.CPP.rate)*100) / 100;
-
-  // Function to calculate how much EI is based on salary cap
-  // const calaculateEI = (salary) => {
-  //   if (salary > props.EI.max) {
-  //     return (props.EI.max / 100) * props.EI.rate;
-  //   }
-
-  //   return (salary / 100) * props.EI.rate;
-  // };
-
-  // let EI = calaculateEI(preTaxSalary);
-
   return(
     <section className="result">
       <div className="result-header">
@@ -33,11 +17,11 @@ export default function ShowCalculation(props) {
         </tr>
         <tr>
           <td className="label">Provincial Taxes</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(0)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.Provincial)}</td>
         </tr>
         <tr>
           <td className="label">Federal Taxes</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(0)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.Federal)}</td>
         </tr>
         <tr>
           <td className="label">Annual Net Salary:</td>
