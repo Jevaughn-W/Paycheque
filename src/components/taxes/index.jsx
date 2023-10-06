@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { calculateTax } from "../../helpers/paychequeCalculation";
 import './taxes.css';
 
 
@@ -34,7 +35,10 @@ export default function Taxes(props) {
   const handleCalculation = (event) => {
     event.preventDefault();
 
-    props.setState(prev => ({...prev, salaryForm }))
+    let Provincial = calculateTax(props.state.ontario.salary, props.state.ontario.rates,props.state.salaryForm.Salary);
+    let Federal = calculateTax(props.state.federal.salary,props.state.federal.rates,props.state.salaryForm.Salary);
+
+    props.setState(prev => ({...prev, salaryForm, 'taxes': {Provincial, Federal} }))
 
   };
 
