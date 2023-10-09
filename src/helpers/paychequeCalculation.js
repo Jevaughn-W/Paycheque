@@ -52,4 +52,6 @@ const calculateTax = (salaryArr, taxArr, userSalary) => {
 };
 
 
-export {calculateTax}
+// export {calculateTax}
+
+module.exports = calculateTax;
