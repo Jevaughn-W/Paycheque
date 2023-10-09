@@ -54,4 +54,4 @@ const calculateTax = (salaryArr, taxArr, userSalary) => {
 
 // export {calculateTax}
 
-module.exports = calculateTax;
+module.exports = calculateTax; // To be used when testing as jest is not configured to use jest at the moment
