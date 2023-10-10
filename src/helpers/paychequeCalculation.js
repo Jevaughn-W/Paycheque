@@ -51,7 +51,13 @@ const calculateTax = (salaryArr, taxArr, userSalary) => {
   return tax;
 };
 
+// Function to calculate EI or CPP based on the input
 
-export {calculateTax}
+const payrollTaxCalculator = ()=> {
 
-// module.exports = calculateTax; // To be used when testing as jest is not configured to use jest at the moment
+};
+
+
+// export {calculateTax, payrollTaxCalculator}
+
+module.exports = {calculateTax, payrollTaxCalculator}; // To be used when testing as jest is not configured to use jest at the moment

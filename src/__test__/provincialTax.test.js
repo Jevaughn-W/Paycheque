@@ -1,6 +1,6 @@
 // import { calculateTax } from "../helpers/paychequeCalculation";
 
-const calculateTax = require("../helpers/paychequeCalculation.js");
+const {calculateTax, payrollTaxCalculator } = require("../helpers/paychequeCalculation.js");
 
 describe('function to calculate taxes', ()=> {
 
@@ -26,4 +26,11 @@ describe('function to calculate taxes', ()=> {
     expect(Math.round(calculateTax(federal.salary, federal.rates, salary))).toBe(17565)
   });
 
+});
+
+
+describe("it should calculate EI based on salary", ()=> {
+  it("it should give a value of 0 if there is no parameters",() => {
+    expect(payrollTaxCalculator()).toBe(undefined);
+  });
 });
