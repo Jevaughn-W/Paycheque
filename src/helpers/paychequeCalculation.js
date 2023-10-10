@@ -53,8 +53,18 @@ const calculateTax = (salaryArr, taxArr, userSalary) => {
 
 // Function to calculate EI or CPP based on the input
 
-const payrollTaxCalculator = ()=> {
-
+const payrollTaxCalculator = (payrollTax, salary)=> {
+  if (payrollTax.type === "cpp") {
+    if (salary * payrollTax.rate > payrollTax.maxContribution) {
+      return payrollTax.maxContribution;
+    }
+    return salary * payrollTax.rate;
+  } else if (payrollTax.type === "ei") { // Check if the value is CPP or EI
+      if (salary  > payrollTax.maxSalary) { 
+        return Math.round(payrollTax.maxSalary * payrollTax.rate);
+      }
+    return Math.round(salary * payrollTax.rate);
+  }
 };
 
 

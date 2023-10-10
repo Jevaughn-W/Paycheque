@@ -29,8 +29,23 @@ describe('function to calculate taxes', ()=> {
 });
 
 
-describe("it should calculate EI based on salary", ()=> {
-  it("it should give a value of 0 if there is no parameters",() => {
-    expect(payrollTaxCalculator()).toBe(undefined);
+describe("it should calculate payroll tax based on salary", ()=> {
+  
+  let salaryOne = 100000;
+  let salaryTwo = 50000;
+  let cpp = {'type': 'cpp', 'rate': 0.0595, 'maxContribution' : 3754};
+  let ei = {'type': 'ei', 'rate' : 0.0163, 'maxSalary' : 61500};
+  
+  it("it should give a value of 3754 if salary is greater than 63092",() => {
+    expect(payrollTaxCalculator(cpp, salaryOne)).toBe(3754);
+  });
+  it("it should give the correct estimate of CPP",() => {
+    expect(payrollTaxCalculator(cpp, salaryTwo)).toBe(2975);
+  });
+  it("it should give a value of 1002.45 if there salary is greater than 61500",() => {
+    expect(payrollTaxCalculator(ei, salaryOne)).toBe(1002);
+  });
+  it("it should give the correct estimate of EI",() => {
+    expect(payrollTaxCalculator(ei, salaryTwo)).toBe(815);
   });
 });
