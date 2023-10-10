@@ -19,12 +19,14 @@ export default function useApplicationData() {
         'rates' : [0.15, 0.205, 0.26, 0.29, 0.33]
       },
       'EI' : {
-        'rate' : 1.63,
-        'maxSalary' : 61500
+        'rate' : 0.0163,
+        'maxSalary' : 61500,
+        'type': 'ei'
       },
       'CPP' : {
         'rate': 0.0595,
-        'maxContribution' : 3754
+        'maxContribution' : 3754,
+        'type' : 'cpp'
       },
       'salaryForm': {'Salary': 0, 'Province': null, 'PayPeriod': null},
       'taxes': {'Provincial': 0, 'Federal': 0}

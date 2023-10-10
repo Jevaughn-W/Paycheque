@@ -51,7 +51,23 @@ const calculateTax = (salaryArr, taxArr, userSalary) => {
   return tax;
 };
 
+// Function to calculate EI or CPP based on the input
 
-export {calculateTax}
+const payrollTaxCalculator = (payrollTax, salary)=> {
+  if (payrollTax.type === "cpp") {
+    if (salary * payrollTax.rate > payrollTax.maxContribution) {
+      return payrollTax.maxContribution;
+    }
+    return salary * payrollTax.rate;
+  } else if (payrollTax.type === "ei") { // Check if the value is CPP or EI
+      if (salary  > payrollTax.maxSalary) { 
+        return Math.round(payrollTax.maxSalary * payrollTax.rate);
+      }
+    return Math.round(salary * payrollTax.rate);
+  }
+};
 
-// module.exports = calculateTax; // To be used when testing as jest is not configured to use jest at the moment
+
+// export {calculateTax, payrollTaxCalculator}
+
+module.exports = {calculateTax, payrollTaxCalculator}; // To be used when testing as jest is not configured to use jest at the moment
