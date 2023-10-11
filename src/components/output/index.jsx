@@ -32,7 +32,7 @@ export default function ShowCalculation(props) {
         </tr>
         <tr>
           <td className="label bolded">Total Tax</td>
-          <td className="bolded">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.Federal + props.state.taxes.Provincial)}</td>
+          <td className="bolded">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.Federal + props.state.taxes.Provincial + props.state.taxes.ei + props.state.taxes.cpp)}</td>
         </tr>
         <tr>
           <td className="label bolded">After-Tax Income</td>
