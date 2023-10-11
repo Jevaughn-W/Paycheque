@@ -28,7 +28,7 @@ export default function ShowCalculation(props) {
         </tr>
         <tr>
           <td className="label">CPP/EI Premiums</td>
-          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(0)}</td>
+          <td>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format(props.state.taxes.ei + props.state.taxes.cpp)}</td>
         </tr>
         <tr>
           <td className="label bolded">Total Tax</td>
