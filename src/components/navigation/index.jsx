@@ -1,4 +1,4 @@
-import './nav.css'
+import './nav.css';
 
 
 export default function NavigationBar() {
@@ -8,7 +8,7 @@ export default function NavigationBar() {
       <h2 className='nav-title'>PayCheque</h2>
 
       <ul>
-        <li>PayCheque Calculator</li>
+        <li>Tax Calculator</li>
         <li>Mortgage Calculator</li>
       </ul>
   
