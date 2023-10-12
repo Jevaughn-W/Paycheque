@@ -8,10 +8,11 @@ import "./main.css";
 export default function Main() {
 
   const {state, setState} = useContext(ApplicationDataContext);
+  const {view, setView} = useState("tax"); // State to manage colour of the link based which component is being viewed
 
   return (
     <div className="main" id="main">
-      <NavigationBar/>
+      <NavigationBar view={view}/>
       <div className='content'>
         <Taxes state={state} setState={setState}/>
         <ShowCalculation state={state} setState={setState}/>

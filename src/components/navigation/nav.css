@@ -4,6 +4,12 @@
   font-weight: normal;
   font-size: normal;
 }
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+  font-weight: normal;
+  font-size: normal;
+}
 .navigation {
   display: flex;
   flex-direction: row;
@@ -26,6 +32,10 @@
   font-family: "Kaushan Script";
   color: #4C5270;
   font-size: 1.5em;
+}
+.navigation a {
+  text-decoration: none;
+  color: #F652A0;
 }
 
 /*# sourceMappingURL=nav.css.map */
