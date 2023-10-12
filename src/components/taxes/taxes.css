@@ -49,5 +49,8 @@
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
   font-family: "Inter";
 }
+.userInput button:hover {
+  background-color: #F652A0;
+}
 
 /*# sourceMappingURL=taxes.css.map */
