@@ -10,7 +10,7 @@ export default function ShowCalculation(props) {
     <section className="result">
       <div className="result-header">
         <h3>Estimated Taxes Owed</h3>
-        <span className="total-summary">{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format((props.state.taxes.Federal + props.state.taxes.Provincial))}</span>
+        <span className= {props.state.taxes.Federal > 0 ? "total-summary active" : "total-summary"}>{new Intl.NumberFormat("en-US", {style: 'currency', currency : "USD"}).format((props.state.taxes.Federal + props.state.taxes.Provincial))}</span>
       </div>
 
       <table>

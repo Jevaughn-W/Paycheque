@@ -61,4 +61,10 @@ span.total-summary {
   font-weight: 600;
 }
 
+span.active {
+  color: #F652A0;
+  font-size: 3em;
+  font-weight: 600;
+}
+
 /*# sourceMappingURL=calculation-panel.css.map */
