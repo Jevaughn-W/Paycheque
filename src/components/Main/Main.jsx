@@ -11,7 +11,7 @@ export default function Main() {
 
   return (
     <div className="main" id="main">
-      <NavigationBarsr/>
+      <NavigationBar/>
       <div className='content'>
         <Taxes state={state} setState={setState}/>
         <ShowCalculation state={state} setState={setState}/>
