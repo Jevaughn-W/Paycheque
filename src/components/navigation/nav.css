@@ -37,5 +37,11 @@
   text-decoration: none;
   color: #F652A0;
 }
+.navigation .active {
+  color: #F652A0;
+}
+.navigation .disabled {
+  color: #4C5270;
+}
 
 /*# sourceMappingURL=nav.css.map */
