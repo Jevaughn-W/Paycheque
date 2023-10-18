@@ -12,23 +12,12 @@ const provinceList = provinces.map((province, index) => {
   );
 });
 
-// Options for the pay period drop down list
-const payPeriods = ['Annually', 'Monthly', 'Semi-Monthly', 'Bi-Weekly'];
-
-const payPeriodList = payPeriods.map((payPeriod, index) => {
-  return(
-    <option value={payPeriod} key={index}>{payPeriod}</option>
-  );
-});
-
 
 export default function Taxes(props) {
     
-  const [salaryForm, setSalaryForm] = useState({"Salary": 0, "Province": null, 'PayPeriod': null});
-  
   // Function to create a controlled component with multiple components
   const handleUserInput = (event)=> {
-    setSalaryForm(prev => ({...prev, [event.target.name] : event.target.value}));
+    props.setState(prev => ({...prev, 'salaryForm': {[event.target.name] : event.target.value}}));
   };
 
   // Function to do an action once the salary and province has been provided - to be updated to provide a calculation
@@ -39,8 +28,10 @@ export default function Taxes(props) {
     let Federal = calculateTax(props.state.federal.salary,props.state.federal.rates,props.state.salaryForm.Salary);
     let cpp = payrollTaxCalculator(props.state.CPP, props.state.salaryForm.Salary);
     let ei = payrollTaxCalculator(props.state.EI, props.state.salaryForm.Salary);
+    
 
-    props.setState(prev => ({...prev, salaryForm, 'taxes': {Provincial, Federal, cpp, ei} }));
+    props.setState(prev => ({...prev, 'taxes': {Provincial, Federal, cpp, ei} }));
+
 
   };
 
@@ -75,25 +66,9 @@ export default function Taxes(props) {
             onChange={event => handleUserInput(event)}
           />
         </div>     
+      </form>
 
-        {/* Input for user pay period */}
-        <div className="form">
-          <label className="form" htmlFor="Payperiod">Pay Period</label>
-          
-          {/* Note that select is used to obtain the drop down menu */}
-          <select 
-            className="form"
-            name="PayPeriod"
-            id="payPeriod-select"
-            onChange={event => handleUserInput(event)}
-          >
-            <option value="">Pay Period</option>
-            {payPeriodList}
-          </select>
-        </div>
-        </form>
-
-        <button onClick={event => handleCalculation(event)}>Calculate</button>
+      <button onClick={event => handleCalculation(event)}>Calculate</button>
     </div>
   )
 
