@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { calculateTax, payrollTaxCalculator } from "../../helpers/paychequeCalculation";
 import './taxes.css';
 
