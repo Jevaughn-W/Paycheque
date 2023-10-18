@@ -22,7 +22,7 @@ export default function useApplicationData() {
         'maxContribution' : 3754,
         'type' : 'cpp'
       },
-      'salaryForm': {'Salary': 0, 'Province': null, 'PayPeriod': null},
+      'salaryForm': {'Salary': 0, 'Province': null},
       'taxes': {'Provincial': 0, 'Federal': 0, 'cpp': 0, 'ei': 0}
     }
   );
