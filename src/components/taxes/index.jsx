@@ -43,7 +43,7 @@ export default function Taxes(props) {
 
         {/* Input for the user province */}
         <div className="form">
-          <label className="form" htmlFor="Province">Province</label>
+          <label className="form" htmlFor="province-select">Province</label>
             <select 
               className="form"
               name="Province"
@@ -62,6 +62,7 @@ export default function Taxes(props) {
             className="form"
             type="text"
             name="Salary"
+            id="Salary"
             placeholder="$"
             onChange={event => handleUserInput(event)}
           />
