@@ -4,7 +4,7 @@ import NavigationBar from '../navigation';
 import Taxes from '../taxes/index';
 import ShowCalculation from "../output";
 import "./main.css";
-import ShowTaxBracket from "../ShowTaxBrackets";
+// import ShowTaxBracket from "../ShowTaxBrackets"; removing until main features work
 
 export default function Main() {
 
@@ -16,7 +16,7 @@ export default function Main() {
       <div className='content'>
         <div className="left-panel">
           <Taxes state={state} setState={setState}/>
-          <ShowTaxBracket state={state}/>
+          {/* <ShowTaxBracket state={state}/> */}
         </div>
         <ShowCalculation state={state} setState={setState}/>
       </div>
