@@ -11,7 +11,7 @@
   font-size: normal;
 }
 .userInput {
-  width: 35%;
+  width: 100%;
 }
 .userInput .form {
   margin-bottom: 0.2em;
@@ -19,7 +19,7 @@
   justify-content: space-between;
 }
 .userInput .form select {
-  width: 15em;
+  width: 40%;
   height: 2em;
   border: solid 1px #F652A0;
   border-radius: 5px;
@@ -27,7 +27,7 @@
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .userInput .form input {
-  width: 14.6em;
+  width: 38%;
   height: 1.7em;
   border: solid 1px #F652A0;
   border-radius: 5px;
